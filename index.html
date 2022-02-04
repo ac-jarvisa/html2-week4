@@ -9,10 +9,31 @@
         .res-swap{
             max-width:100%;
         }
+
+        picture img{
+            max-width:80%;
+        }
     </style>
 </head>
 <body>
     <main>
+        <!-- the picture tag is a great way to provide different images at different sizes,
+        but it can also do what the img srcset is supposed to do -->
+        <picture>
+            <source srcset="images/fall-dog-1200.jpg"
+                    media="(min-width: 1200px)" >
+
+            <source srcset="images/fall-dog-900.jpg"
+                    media="(min-width: 900px)" >
+
+            <source srcset="images/fall-dog-640.jpg"
+                    media="(max-width: 899px)" >
+
+            <img src="images/fall-dog-640.jpg" alt="A brown dog with pumpkins in the background">
+        </picture>
+
+        <!-- using srcset and sizes is supposed to swap the image out at different sizes,
+        ...but it doesn't work yet... -->
         <section>
             <img class="res-swap"
                 srcset="images/fall-dog-640.jpg 640w,
