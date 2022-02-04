@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images</title>
+    <style>
+        .res-swap{
+            max-width:100%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <img class="res-swap"
+                srcset="images/fall-dog-640.jpg 640w,
+                        images/fall-dog-900.jpg 900w,
+                        images/fall-dog-1200.jpg 1200w"
+                sizes="(max-width: 700px) 640px,
+                        (max-width: 960px) 900px,
+                        (max-width: 1280px) 1200px"
+                src="images/fall-dog-900.jpg" alt="A brown dog with pumpkins in the background">
+        </section>
+    </main>
+</body>
+</html>
